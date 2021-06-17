@@ -10,14 +10,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.glf.course.entities.Order;
-import com.glf.course.services.UserService;
+import com.glf.course.entities.User;
+import com.glf.course.services.OrderService;
 
 @RestController
 @RequestMapping(value = "/orders")
 public class OrderResource {
 	
 	@Autowired
-	private UserService service;
+	private OrderService service;
 	
 	@GetMapping
 	public ResponseEntity<List<Order>> findAll(){

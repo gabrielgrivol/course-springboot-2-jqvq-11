@@ -7,20 +7,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.glf.course.entities.Order;
-import com.glf.course.repositories.OrderRepository;
+import com.glf.course.entities.User;
+import com.glf.course.repositories.UserRepository;
 
 @Service
 public class UserService {
 	
 	@Autowired
-	private OrderRepository repository;
+	private UserRepository repository;
 	
-	public List<Order> findAll() {
+	public List<User> findAll() {
 		return repository.findAll();
 	}
 	
-	public Order findById(Long id) {
-		Optional<Order> obj = repository.findById(id);
+	public User findById(Long id) {
+		Optional<User> obj = repository.findById(id);
 		return obj.get();
 		
 		
