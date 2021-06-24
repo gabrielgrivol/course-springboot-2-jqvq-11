@@ -57,11 +57,16 @@ public class OrderItem implements Serializable {
 	public Double getPreco() {
 		return preco;
 	}
+	
 
 	public void setPreco(Double preco) {
 		this.preco = preco;
 	}
 
+	public Double getSubTotal() {
+		return preco * quantidade;
+	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
